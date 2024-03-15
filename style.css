@@ -10,11 +10,12 @@
 div.container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100vh;
-    background-color: #110910;
+    gap: 20px;
+    padding: 20px;
+    min-height: 100vh;
+    background-color: #09040a;
 }
 
 div.perfil {
@@ -38,6 +39,11 @@ div.perfil-image img {
     width: 100%;
     object-fit: cover;
     object-position: center;
+    transition: 0.4s;
+}
+
+div.perfil-image img:hover {
+    transform: scale(1.04);
 }
 
 div.perfil-description {
@@ -45,9 +51,11 @@ div.perfil-description {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    gap: 20px;
     width: 50%;
     text-align: justify;
 }
+
 div.perfil-description h1 {
     color:white;
 }
@@ -56,7 +64,88 @@ div.perfil-description h3 {
     color: #bdbdbd;
 }
 
-div.projects-area {
+div.projects {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+div.projects div.project-image {
+    width: 200px;
+}
+
+div.projects div.project-image:hover img {
+    animation: flutuar 1.5s infinite;
+    box-shadow: 3px 3px 1px #19C37D;
+}
+
+div.projects div.project-image img {
+    width: 100%;
+    object-fit: cover;
+    box-shadow: 3px 3px 1px white;
+    transition: 0.4s;
+}
+
+div.social-medias {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
+}
+
+div.icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+div.icons a {
+    text-decoration: none;
+    font-size: 24px;
+    color:white;
+    transition: 0.4s;
+}
+div.icons a:hover {
+    color: #19C37D;
+}
+
+@keyframes flutuar {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-2px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+h1 {
+    position: relative;
+    padding-bottom: 10px;
+    color: white;
+}
+
+h1::after {
+    content: '';
+    position: absolute;
+    text-align: center;
+    width: 50%;
+    left: 25%;
+    bottom: 0px;
+    color: white;
+    height: 4px;
+    background-color: #19C37D;
+    transition: width 0.5s ease, left 0.5s ease; 
+}
+
+h1:hover::after {
+    width: 100%;
+    left: 0%;
 }
