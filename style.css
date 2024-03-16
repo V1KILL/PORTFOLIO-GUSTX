@@ -15,7 +15,7 @@ div.container {
     gap: 20px;
     padding: 20px;
     min-height: 100vh;
-    background-color: #09040a;
+    background-color: #071019;
 }
 
 div.perfil {
@@ -40,6 +40,7 @@ div.perfil-image img {
     object-fit: cover;
     object-position: center;
     transition: 0.4s;
+    user-select: none;
 }
 
 div.perfil-image img:hover {
@@ -74,19 +75,24 @@ div.projects {
 }
 
 div.projects div.project-image {
-    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+    width: 220px;
+    border-bottom: 3px solid white;
 }
 
 div.projects div.project-image:hover img {
-    animation: flutuar 1.5s infinite;
-    box-shadow: 3px 3px 1px #19C37D;
+    background-color: #19C37D;
 }
 
 div.projects div.project-image img {
     width: 100%;
     object-fit: cover;
-    box-shadow: 3px 3px 1px white;
     transition: 0.4s;
+    color: white;
+    animation: flutuar 1.5s infinite;
 }
 
 div.social-medias {
@@ -119,7 +125,7 @@ div.icons a:hover {
         transform: translateY(0);
     }
     50% {
-        transform: translateY(-2px);
+        transform: translateY(-3px);
     }
     100% {
         transform: translateY(0);
@@ -148,4 +154,29 @@ h1::after {
 h1:hover::after {
     width: 100%;
     left: 0%;
+}
+
+.swal-overlay {
+    background-color: rgba(0, 0, 0, 0.700);
+}
+
+.swal-modal {
+    background-color: #071019;
+}
+
+.swal-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: white;
+}
+
+.swal-text {
+    color: white;
+    font-weight: 600;
+    text-align: justify;
+}
+
+.swal-button {
+    background-color: white;
+    color: #071019;
 }
