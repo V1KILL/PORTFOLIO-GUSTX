@@ -30,7 +30,7 @@ div.perfil-image {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50%;
+    min-width: 350px;
     padding: 20px;
     border: 1px solid whitesmoke;
 }
@@ -53,7 +53,7 @@ div.perfil-description {
     align-items: center;
     flex-direction: column;
     gap: 20px;
-    width: 50%;
+    max-width: 500px;
     text-align: justify;
 }
 
@@ -88,7 +88,11 @@ div.projects div.project-image:hover img {
 }
 
 div.projects div.project-image img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
+    height: 100px;
     object-fit: cover;
     transition: 0.4s;
     color: white;
@@ -188,10 +192,16 @@ div.tecnologie p {
 
 div.tecnologie-image {
     width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 div.tecnologie-image img {
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     object-fit: cover;
     object-position: center;
 }
