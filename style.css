@@ -21,7 +21,8 @@ div.container {
 div.perfil {
     display: flex;
     justify-content: center;
-    flex-direction: row-reverse;
+    align-items: center;
+    flex-direction: column-reverse;
     gap: 20px;
     padding: 20px;
 }
@@ -30,8 +31,8 @@ div.perfil-image {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-width: 350px;
     padding: 20px;
+    max-width: 350px;
     border: 1px solid whitesmoke;
 }
 
@@ -68,7 +69,7 @@ div.perfil-description h3 {
 div.projects {
     display: flex;
     justify-content: center;
-    align-items: center;
+
     width: 100%;
     gap: 20px;
     flex-wrap: wrap;
@@ -79,7 +80,8 @@ div.projects div.project-image {
     justify-content: center;
     align-items: center;
     padding-bottom: 20px;
-    width: 220px;
+    max-width: 500px;
+    max-height: 500px;
     border-bottom: 3px solid white;
 }
 
@@ -92,7 +94,7 @@ div.projects div.project-image img {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100px;
+    height: 100%;
     object-fit: cover;
     transition: 0.4s;
     color: white;
@@ -164,6 +166,7 @@ div.tecnologies {
     justify-content: center;
     align-items: center;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 div.tecnologie {
@@ -229,4 +232,34 @@ div.tecnologie-image img {
 .swal-button {
     background-color: white;
     color: #071019;
+}
+
+@media screen and (min-width: 1060px) {
+    div.projects div.project-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 20px;
+        max-width: 500px;
+       
+        border-bottom: 3px solid white;
+    }
+    
+    div.projects div.project-image:hover img {
+        background-color: #19C37D;
+    }
+    
+    div.projects div.project-image img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 20px;
+        
+        object-fit: cover;
+        object-position: center;
+        transition: 0.4s;
+        color: white;
+        animation: flutuar 1.5s infinite;
+    }
 }
