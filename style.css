@@ -108,6 +108,10 @@ div.social-medias {
     flex-direction: column;
 }
 
+div.social-medias a {
+    text-decoration: none;
+}
+
 div.icons {
     display: flex;
     justify-content: center;
