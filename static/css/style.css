@@ -267,3 +267,7 @@ div.tecnologie-image img {
         animation: flutuar 1.5s infinite;
     }
 }
+
+span {
+    color: #19C37D;
+}
